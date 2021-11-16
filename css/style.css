@@ -587,6 +587,7 @@ a {
 
 .subscribe-input:focus{
   background: #E6E6E6;
+  border-radius: 10px 0 0 10px;
   border: 3px solid #83B3D3;
   outline: none;
 }
@@ -624,6 +625,7 @@ a {
 .subscribe-submit:focus{
   background: var(--dark-blue);
   border: 3px solid #756257;
+  border-radius: 0px 10px 10px 0px;
   outline: none;
 }
 
@@ -1001,6 +1003,11 @@ a {
   box-shadow: 0px 0px 0px 3px #81B3D2;
 }
 
+.min-max-group:valid{
+  background: var(--white);
+  border: 3px solid #000000;
+}
+
 .min-max-input{
   width: 98px;
   background: none;
@@ -1171,6 +1178,18 @@ a {
   padding: 0 0 0 12px;
 }
 
+.select-control:hover {
+  border: 2px solid var(--blue);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.select-control:focus {
+  border: 2px solid var(--blue);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
 .sorting-list{
   padding: 0;
   margin: 0 0 0 72px;
@@ -1218,6 +1237,23 @@ a {
   background: url("../img/mode-tile.svg") no-repeat top left;
 }
 
+.sorting-link:hover {
+  border: 2px solid var(--blue);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.sorting-link:focus {
+  border: 2px solid var(--blue);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.sorting-link:valid {
+  border: 2px solid var(--black);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
 
 .hotels{
   padding: 0 70px;
@@ -1251,6 +1287,14 @@ a {
   left: 2px;
 }
 
+.hotel-img-link:hover {
+  opacity: 0.6;
+}
+
+.hotel-img-link:focus{
+  border: 3px solid var(--blue);
+}
+
 .hotel-img{
   display: block;
 
@@ -1266,7 +1310,19 @@ a {
   font-size: 24px;
   line-height: 31px;
   font-weight: 700;
+  display: block;
 
+}
+
+.hotel-name:hover {
+  color: var(--brown);
+}
+
+.hotel-name:focus {
+  border: 3px solid var(--blue);
+  box-sizing: border-box;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .hotel-type-container{
@@ -1315,13 +1371,40 @@ a {
   margin-right: 7px;
 }
 
+.hotel-link:hover{
+  background: var(--dark-brown);
+}
+
+.hotel-link:focus{
+  background: var(--dark-brown);
+  border: 3px solid var(--blue);
+}
+
 .hotel-liked{
   background: var(--blue);
   min-width: 160px;
 }
 
+.hotel-liked:hover{
+  border: 1px solid var(--brown);
+  background: var(--dark-blue);
+}
+
+.hotel-liked:focus{
+  border: 3px solid var(--brown);
+  background: var(--dark-blue);
+}
 .hotel-liked--liked{
   background: var(--green);
+}
+
+.hotel-liked--liked:hover{
+  background: var(--dark-green);
+}
+
+.hotel-liked--liked:focus{
+  background: var(--dark-green);
+  border: 3px solid var(--brown);
 }
 
 .hotel-rate-container{
@@ -1448,6 +1531,19 @@ a {
   color: #FFFFFF;
   text-decoration: none;
   border-radius: 4px;
+}
+
+.pagination-link:hover {
+  background: var(--dark-blue);
+}
+
+.pagination-link:focus {
+  background: var(--dark-blue);
+  border:3px solid var(--brown);
+}
+
+.pagination-link:valid {
+  background: var(--light-gray);
 }
 
 .pagination-current{
