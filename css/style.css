@@ -26,10 +26,6 @@ body{
   height: 100vh;
 }
 
-a {
-  text-decoration: none;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -93,7 +89,7 @@ a {
 
 .site-list {
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 -8px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -115,9 +111,9 @@ a {
   line-height: 26px;
   color: var(--black);
   text-decoration: none;
-  padding: 3px 0 5px;
+  padding: 3px 9px 5px;
   margin: 0 6px;
-  border-radius: 7px;
+  border-radius: 10px;
   border: 3px solid transparent;
 }
 
@@ -314,6 +310,7 @@ a {
   vertical-align: top;
   border: 3px solid transparent;
   border-radius: 10px;
+  text-decoration: none;
 }
 
 .cart-item-link:hover{
@@ -347,6 +344,7 @@ a {
   line-height: 25px;
   color: var(--black);
   font-weight: 700;
+  text-decoration: none;
 }
 
 .cart-item-type {
@@ -355,6 +353,7 @@ a {
   font-size: 16px;
   color: var(--dark);
   line-height: 18px;
+  text-decoration: none;
 }
 
 .cart-item-delete {
@@ -414,6 +413,7 @@ a {
   box-sizing: border-box;
   padding: 17px 10px;
   border: 3px solid var(--brown);
+  text-decoration: none;
 }
 
 .cart-link-all:hover{
@@ -1074,6 +1074,7 @@ a {
   color: var(--white);
   border: 3px solid transparent;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .breadcrumbs-link:hover{
@@ -1141,14 +1142,15 @@ a {
 
 .checkbox-label::before{
   content: "";
-  width: 20px;
-  height: 20px;
-  border-radius: 3px;
+  width: 15px;
+  height: 14px;
+  border-radius: 4px;
   background: var(--white);
   display: block;
   position: absolute;
   left: 0;
   top: 0;
+  border: 3px solid transparent;
 }
 
 .checkbox-label::after{
@@ -1168,13 +1170,16 @@ a {
   display: block;
 }
 
-.checkbox-label::before:hover{
+.checkbox-label:hover::before{
   background: rgba(255, 255, 255, 0.6);
 }
 
-.checkbox-label::before:focus{
+
+
+.checkbox-input:focus + .checkbox-label::before{
   border-color: var(--blue);
   outline: none;
+  background: rgba(255, 255, 255, 0.6);
 }
 
 
@@ -1192,14 +1197,15 @@ a {
 
 .radio-label::before{
   content: "";
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 14px;
   border-radius: 50%;
   background: var(--white);
   display: block;
   position: absolute;
   left: 0;
   top: 0;
+  border: 3px solid transparent;
 }
 
 .radio-label::after{
@@ -1218,6 +1224,18 @@ a {
 .radio-input:checked + .radio-label::after{
   display: block;
 }
+
+.radio-label:hover::before {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.radio-input:focus + .radio-label::before {
+  border-color: var(--blue);
+  outline: none;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+
 
 .min-max-container{
   border: 2px solid var(--white);
@@ -1342,6 +1360,8 @@ a {
   position: absolute;
   top: 0;
   left: 0;
+  border: none;
+  cursor: pointer;
 }
 
 .range-handle--min{
@@ -1480,6 +1500,7 @@ a {
   border: 2px solid #E6E6E6;
   box-sizing: border-box;
   border-radius: 4px;
+  background: transparent;
 }
 
 .sorting-link::before{
@@ -1753,6 +1774,7 @@ a {
   box-sizing: border-box;
   padding-top: 14px;
   border-radius: 4px;
+  text-decoration: none;
 }
 
 .pagination-sorting-page{
